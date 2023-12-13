@@ -8,10 +8,12 @@
     line-height: 50%;
 }
 .cell{
-    width: 100px;
+    width: 10%;
     height: 100px;
-    text-align: center;
-    line-height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid black;
     font-weight: bold;
     font-size: 20px;
     background-color: gray;

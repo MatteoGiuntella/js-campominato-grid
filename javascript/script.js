@@ -9,3 +9,25 @@
 // 2- la tavola di gioco sarà composta da 10 caselle su 10 righe
 
 // 3- quando l'utente clicca sulla cella cambia colore e stampa il numero in console
+
+let newGame = document.getElementById('newgame');
+newGame .addEventListener('click', function(){
+
+    for (let i = 1; i <= 100; i++) {
+
+        let cell = document.createElement('div');
+        cell.append(i);
+        cell.classList.add('cell')
+        document.getElementById("my-container-cell").append(cell); 
+
+        cell.addEventListener('click', function(){
+        
+            cell.classList.add('cell-active')
+
+        })  
+    }
+})
+
+function numberCell(min, max){
+    return Math.floor(Math.random() * (max - min + 1) + 1);
+}
