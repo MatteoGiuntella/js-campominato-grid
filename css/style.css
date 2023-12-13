@@ -1,0 +1,24 @@
+.start-play{
+    background-color: blue;
+    color: white;
+    height: 50px;
+    border: 1px solid blue;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 50%;
+}
+.cell{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 50%;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: gray;
+    color: brown;
+}
+
+.cell-active{
+    color: blueviolet;
+    background-color: lightcyan;
+}
