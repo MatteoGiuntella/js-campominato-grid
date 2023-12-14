@@ -11,14 +11,17 @@
 // 3- quando l'utente clicca sulla cella cambia colore e stampa il numero in console
 
 let start = false;
+// creata una flag che mi servirà da interrutore per attivare e disattivafre le condizione nel mio ciclo
 
 let newGame = document.getElementById('newgame');
 newGame .addEventListener('click', function(){
-
+// creo evento click assegnando come valore alla variabile newgame il bottone su html
     let difficult = document.getElementById('select').value;
     console.log('difficult',difficult, typeof difficult)
     let option = 49;
     let classe = 'easy';
+
+    // le due variabili qui sopra indicano rispettivamente le classi del css creata per variare il numero di celle in base alla difficoltà
 
     if ( difficult == 'hard'){
         option = 100
@@ -38,30 +41,23 @@ newGame .addEventListener('click', function(){
             cell.append(i);
             cell.classList.add('cell', classe)
             document.getElementById("my-container-cell").append(cell); 
-    
+            // creo un elemnto div e ci appendo le classi creata nel css che si vedranno solo ed esculisavamte con l'elemnto click
             cell.addEventListener('click', function(){
                 cell.classList.add('cell-active')    
+                // aggiungo eventoi click sulle celle create in precedenza e assegno una nuova classe che mi farà cambiare colore al momento del click su di esse
             })  
         }
     }
     else{
         start = false;
         document.getElementById("my-container-cell").innerHTML = '';
-    }  
+    }
+    // con questo ramo della condizione faccio in modo che se viene ricliccato il bottone non aggiungerà alte celle ma resetterà la pagina allo stato iniziale  
 })
 
 function numberCell(min, max){
     return Math.floor(Math.random() * (max - min + 1) + 1);
 }
-
-// se il livello di difficoltà selezionato sarà medium le celle sarrano 81
-
-// se il livello di difficoltà selezionato sarà easy le celle saranno 49
-
-// se il livelli di diffcoltà selezionato sarà easy le celle saranno 100 _____
-
-
-
 
 
 
