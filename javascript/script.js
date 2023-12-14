@@ -43,7 +43,7 @@ newGame .addEventListener('click', function(){
             document.getElementById("my-container-cell").append(cell); 
             // creo un elemnto div e ci appendo le classi creata nel css che si vedranno solo ed esculisavamte con l'elemnto click
             cell.addEventListener('click', function(){
-                cell.classList.add('cell-active')    
+            cell.classList.add('cell-active')    
                 // aggiungo eventoi click sulle celle create in precedenza e assegno una nuova classe che mi farà cambiare colore al momento del click su di esse
             })  
         }
